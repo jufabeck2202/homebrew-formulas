@@ -5,50 +5,50 @@
 class Brew2ansible < Formula
   desc "Tool to helps you manage your brew and cask installs using ansible"
   homepage "https://juli.sh"
-  version "0.2.1"
+  version "1.0.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jufabeck2202/brew-to-mac-ansible-playbook/releases/download/v0.2.1/brew2ansible_0.2.1_Darwin_arm64.tar.gz"
-      sha256 "197060bd7d52922ad0529a99f453aa549147f0fd8adb52278d1e06b17105d74b"
+      url "https://github.com/jufabeck2202/brew-to-mac-ansible-playbook/releases/download/v1.0.0/brew2ansible_1.0.0_Darwin_arm64.tar.gz"
+      sha256 "23105b25396e5f3c0b2ec48b759b68fe0f5ab34fe50c9d2a1cbc59d986b76bde"
 
       def install
-        bin.install "beju"
+        bin.install "brew2ansible"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jufabeck2202/brew-to-mac-ansible-playbook/releases/download/v0.2.1/brew2ansible_0.2.1_Darwin_x86_64.tar.gz"
-      sha256 "919b98bf0dd63d71db771596e71a56fed184d7eebb41657729e8d6f8e96de12d"
+      url "https://github.com/jufabeck2202/brew-to-mac-ansible-playbook/releases/download/v1.0.0/brew2ansible_1.0.0_Darwin_x86_64.tar.gz"
+      sha256 "8eef386d008d0ec1de6bea9a041bb868111fcb60858840fff19ffbbda671b676"
 
       def install
-        bin.install "beju"
+        bin.install "brew2ansible"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/jufabeck2202/brew-to-mac-ansible-playbook/releases/download/v0.2.1/brew2ansible_0.2.1_Linux_armv6.tar.gz"
-      sha256 "6f4c9d724bfaa2d5a1b347d7fc05a9f79753f78ea29bdf525ede31d7cee46d21"
+    if Hardware::CPU.intel?
+      url "https://github.com/jufabeck2202/brew-to-mac-ansible-playbook/releases/download/v1.0.0/brew2ansible_1.0.0_Linux_x86_64.tar.gz"
+      sha256 "e0beb5ac5375ef79a33d4ab3e4402f1bb4f3d16abd299cfa14652f5e558e1c2e"
 
       def install
-        bin.install "beju"
+        bin.install "brew2ansible"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/jufabeck2202/brew-to-mac-ansible-playbook/releases/download/v1.0.0/brew2ansible_1.0.0_Linux_armv6.tar.gz"
+      sha256 "a3eff8e64acbf588155897ecd7e65a6c0a17dd36b47b2591a5a706b094dd4016"
+
+      def install
+        bin.install "brew2ansible"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jufabeck2202/brew-to-mac-ansible-playbook/releases/download/v0.2.1/brew2ansible_0.2.1_Linux_arm64.tar.gz"
-      sha256 "211564a66cf8f7f9dcacd4de26b11c422c9d4f1422d0bb0c38d164b77e59610c"
+      url "https://github.com/jufabeck2202/brew-to-mac-ansible-playbook/releases/download/v1.0.0/brew2ansible_1.0.0_Linux_arm64.tar.gz"
+      sha256 "ee8202119a3b1f37c56ee897d4e248e1b2cf7647581864c36d59051de082f861"
 
       def install
-        bin.install "beju"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/jufabeck2202/brew-to-mac-ansible-playbook/releases/download/v0.2.1/brew2ansible_0.2.1_Linux_x86_64.tar.gz"
-      sha256 "e3ef95c5c60fde5b6e202eaccd9966fb0e1743daa67f74c074a05126c97cd88a"
-
-      def install
-        bin.install "beju"
+        bin.install "brew2ansible"
       end
     end
   end
